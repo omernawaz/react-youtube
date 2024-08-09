@@ -8,7 +8,7 @@ const VideoList = ({ videoList }) => {
         <VideoListCard
           key={index}
           video={item.snippet}
-          videoId={item.id.videoId}
+          videoId={item.id.videoId ? item.id.videoId : item.id}
         />
       ))}
     </Grid>

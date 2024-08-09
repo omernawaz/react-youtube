@@ -67,7 +67,7 @@ const Search = () => {
       ) : (
         <Card sx={{ minWidth: 275, mt: 5 }}>
           <CardContent>
-            <Typography>Search SomethingTo Get Started...</Typography>
+            <Typography>Search Something To Get Started...</Typography>
           </CardContent>
         </Card>
       )}

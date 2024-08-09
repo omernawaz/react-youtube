@@ -33,7 +33,7 @@ const View = () => {
   });
 
   if (!isSuggestionsDataLoading && !isSugesstionsDataError) {
-    console.log(suggestionsData);
+    console.log("Suggestions", suggestionsData);
   }
 
   useEffect(() => {

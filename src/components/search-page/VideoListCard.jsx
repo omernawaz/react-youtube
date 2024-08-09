@@ -5,29 +5,19 @@ import { Link } from "react-router-dom";
 const VideoListCard = ({ video, videoId }) => {
   const thumbnail = video.thumbnails.medium;
 
-  function handleClick() {
-    console.log(videoId);
-    window.location.replace("./view/" + videoId);
-  }
   return (
     <Box sx={{ width: thumbnail.width, marginRight: 0.5, my: 5 }}>
-      <Link to={"./view/" + videoId}>
+      <Link to={"/view/" + videoId}>
         <img
           style={{ width: thumbnail.width, height: thumbnail.height }}
           alt={video.title}
           src={thumbnail.url}
-          onClick={() => handleClick()}
         />
       </Link>
 
       <Box sx={{ pr: 2 }}>
         <Link to={"/view/" + videoId}>
-          <Typography
-            gutterBottom
-            variant="body2"
-            onClick={() => handleClick()}
-            color="text.primary"
-          >
+          <Typography gutterBottom variant="body2" color="text.primary">
             {video.title}
           </Typography>
         </Link>
