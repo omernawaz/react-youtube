@@ -29,7 +29,7 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "search/:videoId",
+        path: "search/:searchString",
         element: <Search />,
       },
       {

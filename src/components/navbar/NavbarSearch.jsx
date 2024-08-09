@@ -1,13 +1,18 @@
 import { Fab, TextField, Stack, Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavbarSearch = () => {
   const [searchString, setSearchString] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.replace("./search/" + searchString);
+    if (searchString === "") {
+      navigate("/");
+    } else {
+      navigate("/search/" + searchString);
+    }
   };
   return (
     <Box

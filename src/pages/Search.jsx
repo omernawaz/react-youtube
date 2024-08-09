@@ -7,8 +7,8 @@ import VideoListSkeleton from "../components/search-page/VideoListSkeleton";
 import { useParams } from "react-router-dom";
 
 const Search = () => {
-  const searchString = useParams();
-
+  const { searchString } = useParams();
+  console.log(searchString);
   const { data, error, isFetching, isError } =
     useGetSearchResultsQuery(searchString);
 
