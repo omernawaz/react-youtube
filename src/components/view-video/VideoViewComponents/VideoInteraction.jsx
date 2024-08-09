@@ -3,6 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Fab from "@mui/material/Fab";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
@@ -23,6 +24,7 @@ const VideoInteraction = ({ videoSnippet }) => {
       <Fab variant="extended" sx={{ ml: 3 }}>
         Subscribe
       </Fab>
+      <Box sx={{ flexGrow: 1 }} />
       <ButtonGroup
         disableElevation
         variant="outlined"

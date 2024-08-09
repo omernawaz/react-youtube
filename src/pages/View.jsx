@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 
-import Navbar from "../components/view-video/Navbar";
 import VideoListSkeleton from "../components/search-page/VideoListSkeleton";
 import { useGetRelatedQuery, useGetVideoQuery } from "../services/youtubeApi";
 
@@ -47,7 +46,6 @@ const View = () => {
 
   return (
     <div>
-      <Navbar />
       <Stack sx={{ m: 5 }} direction="row">
         {!isVideoDataLoading && videoData && !isVideoError ? (
           <VideoView videoData={videoData.items[0]} />
