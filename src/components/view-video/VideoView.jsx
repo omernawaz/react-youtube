@@ -12,7 +12,6 @@ import VideoInteraction from "./VideoViewComponents/VideoInteraction";
 import VideoDescription from "./VideoViewComponents/VideoDescription";
 const VideoView = ({ videoData }) => {
   const videoSnippet = videoData.snippet;
-  console.log("Snippet", videoSnippet);
   return (
     <Box>
       <Stack direction="column" spacing={2} sx={{ width: PLAYER_WIDTH }}>

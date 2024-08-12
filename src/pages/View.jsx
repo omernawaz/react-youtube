@@ -23,17 +23,10 @@ const View = () => {
     isError: isVideoError,
   } = useGetVideoQuery(videoId);
 
-  const {
-    data: suggestionsData,
-    isFetching: isSuggestionsDataLoading,
-    isError: isSugesstionsDataError,
-  } = useGetRelatedQuery(fetchSuggestions.fetchArg, {
-    skip: !fetchSuggestions.shouldFetch,
-  });
-
-  if (!isSuggestionsDataLoading && !isSugesstionsDataError) {
-    console.log("Suggestions", suggestionsData);
-  }
+  const { data: suggestionsData, isFetching: isSuggestionsDataLoading } =
+    useGetRelatedQuery(fetchSuggestions.fetchArg, {
+      skip: !fetchSuggestions.shouldFetch,
+    });
 
   useEffect(() => {
     if (!isVideoDataLoading && !isVideoError && videoData) {
